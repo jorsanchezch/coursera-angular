@@ -1,5 +1,5 @@
-FROM node:14-alpine
-WORKDIR /usr/app
-RUN npm init -y && npm install @angular/cli && npm install
-EXPOSE 4200 49153
-CMD npm start
+FROM node:14-alpine AS flippy-image
+WORKDIR /flippy
+RUN npm install -g @angular/cli
+
+EXPOSE 4200
